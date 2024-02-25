@@ -1,0 +1,97 @@
+I have been doing my NPTEL Course on joy of computing using python and here are some code with my explaination
+
+(1) CROWD SOUNDING
+
+First of all you have to import matpltlib.pyplot as plt this is used for plotting a graph 
+then import  statistics for calculating mean value 
+then scipy for stats for  Return mean of array after trimming distribution from both tails
+then take an estimate list with some values in it
+take another empty list
+first sirt the estimate
+then take up to how much percentage you want to take to cut int list the remove part doesn't count here only the percentage taking part countscutting out values in list to up some extend 
+then for loop upto estimate
+plt.plot(estimate,y,'ro') --> x axis,y axis,the color inside the graph
+m=stats.trim_mean(estimate,0.1)--> Return mean of array after trimming distribution from both tails
+
+
+(2) YOUNGER 
+take 4 variable of the name and dob 
+take another 4 variable and convert c2_date to int 
+the use if else condition and solve it 
+at last print the youngest
+
+(3) ALPHABETS INORDER 
+1st process 
+take a variable with input().lower to lower the char 
+a to find the len
+empty variable
+then for loop of char in string.ascii_lowercase-> means it has all the alphabets of lower characters 
+then another for loop  till a
+if  condition if char== text[i] then add the char into output 
+the print output 
+
+other is  
+def sort_string_alphabetically(input_string):
+    # Convert the string to lowercase
+    input_string = input_string.lower()
+    
+    # Sort the string in alphabetical order
+    sorted_string = ''.join(sorted(input_string))
+    
+    # Print the sorted string
+    print(sorted_string)
+
+# Example usage:
+input_str = input()
+sort_string_alphabetically(input_str)
+
+
+(4) MAGIC SQUARE
+
+First condition will be 1 postion in square it will in 1 st 3rd col so that is why first initalise i=n//2 and j=n-1
+count=1
+num=n*n
+while loop from count<=num
+if i==-1 and j==n
+then do i=0 and j=n-2
+else
+if j==n then j=0
+else i<0 then i=n-1
+
+if square[i][j]!=0 then i=i+1 and j=j-2 and leave it by continue 
+else  square[i][j]=count and count+1
+i=i-1 and j=j+1
+then print matrix
+
+(5) DOBBLE GAME
+
+import random and string 
+a empty symbol list
+symbols list will list of all string_ascii_letters->which means all alphabets from a-z and A-Z
+a list of cars1 and 2=[0]*5
+pos1 and pos2=random.randint(0,4)
+samesymbol=random choice from symbols then remove the samesymbols from symbols so that there is no repeation 
+if pos1==pos2
+card1[pos1] will be equal to samesymbol 
+card2[pos2] will be equal to samesymbol 
+else:
+    card1[pos1]=samesymbol
+    card2[pos2]=samesymbol
+    card1[pos2]=random.choice(symbols)
+    symbols.remove(card1[pos2])
+    card2[pos1]=random.choice(symbols)
+    symbols.remove(card2[pos1])
+then
+i=0
+while(i<5):
+    if(i!=pos1 and i!=pos2):
+        alphabet1=random.choice(symbols)
+        symbols.remove(alphabet1)
+        alphabet2=random.choice(symbols)
+        symbols.remove(alphabet2)
+        card1[i]=alphabet1
+        card2[i]=alphabet2
+    i=i+1
+print(card1)
+print(card2)
+
